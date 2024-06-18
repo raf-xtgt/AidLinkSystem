@@ -1,0 +1,55 @@
+# start of Meshtastic configure yaml
+channel_url: https://meshtastic.org/e/#CgcSAQE6AgggEgoIAUADSAFQHmgB
+config:
+  bluetooth:
+    enabled: true
+    fixedPin: 123456
+  device:
+    nodeInfoBroadcastSecs: 10800
+    serialEnabled: true
+  display:
+    screenOnSecs: 600
+  lora:
+    hopLimit: 3
+    sx126xRxBoostedGain: true
+    txEnabled: true
+    txPower: 30
+    usePreset: true
+    region: SG_923  # Set the region to SG_923 for Singapore (and general use in Southeast Asia)
+  network:
+    ntpServer: meshtastic.pool.ntp.org
+  position:
+    broadcastSmartMinimumDistance: 100
+    broadcastSmartMinimumIntervalSecs: 30
+    gpsMode: ENABLED
+    gpsUpdateInterval: 120
+    positionBroadcastSecs: 900
+    positionBroadcastSmartEnabled: true
+    positionFlags: 811
+  power:
+    lsSecs: 300
+    minWakeSecs: 10
+    sdsSecs: 4294967295
+    waitBluetoothSecs: 60
+module_config:
+  ambientLighting:
+    current: 10
+    green: 246
+    red: 135
+  detectionSensor:
+    detectionTriggeredHigh: true
+    minimumBroadcastSecs: 45
+  mqtt:
+    address: mqtt.meshtastic.org
+    encryptionEnabled: true
+    password: large4cats
+    root: msh
+    username: meshdev
+  neighborInfo:
+    updateInterval: 900
+  telemetry:
+    airQualityInterval: 900
+    deviceUpdateInterval: 900
+    environmentUpdateInterval: 900
+owner: Meshtastic f600
+owner_short: f600
